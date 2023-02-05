@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+
+case $1 in
+    "")
+        curl "wttr.in/{Jamundi}?1"
+        echo -e "\n"
+        curl "wttr.in/{Jamundi,Cali,Mosquera+Cundinamarca,Bogota,Miami}?format="%l:+%c+%C+%t+%h+"Wind:"%w+"UV:"%u"\n"
+        ;;
+     es)
+        curl "es.wttr.in/{Jamundi,Mosquera+Cundinamarca}?1"
+       ;;   
+     *)
+        curl "wttr.in/$1?2"
+        ;;
+
+esac
+
